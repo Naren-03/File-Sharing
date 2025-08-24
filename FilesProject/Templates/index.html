@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+     <h2>Upload File</h2>
+        <form method="get">
+            {% csrf_token %}
+            <input type="file"  id = "file" name="file"/>
+            <button type="submit">Submit</button>
+        </form> 
+        {%for i in error%}
+            <h5> {{i}}</h5>
+        {%endfor%}
+    </div>
+</body>
+
+</html>
